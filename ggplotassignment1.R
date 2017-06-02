@@ -13,7 +13,7 @@ ggplot(titanic, aes(x = factor(pclass), fill = factor(sex))) +
 # Use ggplot() for the second instruction
 ggplot(titanic, aes(x = factor(pclass), fill = factor(sex))) + 
   geom_bar(position = "dodge") + 
-  facet_grid(". ~ Survived")
+  facet_grid(". ~ survived")
 
 # Position jitter (use below)
 posn.j <- position_jitter(0.5, 0)
@@ -23,3 +23,5 @@ ggplot(titanic, aes(x = factor(pclass), y = age, col = factor(sex))) +
   geom_jitter(size = 3, alpha = 0.5, position = posn.j) + 
   facet_grid(. ~ survived)
 
+ggplot(titanic, aes(x = factor(pclass), fill = factor(sex))) + geom_bar(position = 'dodge') + 
+  facet_grid(. ~ survived)
